@@ -1,0 +1,4 @@
+test:
+  override:
+    - grep html index.html
+    
