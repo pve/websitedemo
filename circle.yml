@@ -1,5 +1,6 @@
 test:
   override:
     - grep html index.html
-    - grep error index.html; test $? -eq 1
+    - # grep error index.html; test $? -eq 1
+    - python stricthtml.py
     
