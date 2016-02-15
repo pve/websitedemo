@@ -1,5 +1,6 @@
 import html5lib
-with open("index.html", "rb") as f:
+#with open("index.html", "rb") as file
+with open("styles.css", "rb") as f:
     parser = html5lib.HTMLParser(strict=True)
     document = parser.parse(f)
     

@@ -9,6 +9,7 @@ test:
 
 general:
   artifacts:
-    - "test.txt" # a single file, relative to the build directory
+    - "validate.json" # a single file, relative to the build directory
 
 # grep error index.html; test $? -eq 1
+# wget  "https://validator.w3.org/check?uri=https://websitedemo-pve-1.c9users.io/index.html&output=json" -O validate.json
