@@ -6,6 +6,7 @@ test:
   override:
     - grep html index.html
     - python stricthtml.py
+    - echo foo > validate.json
 
 general:
   artifacts:
