@@ -1,1 +1,2 @@
+setuptools>18.5
 html5lib>=0.999
