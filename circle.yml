@@ -6,11 +6,19 @@ test:
   override:
     - grep html index.html
     - python stricthtml.py
-    - echo foo > validate.json
+    - echo foo > validate.json # should go away
 
 general:
   artifacts:
     - "validate.json" # a single file, relative to the build directory
+    
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync ./index.html s3://demo2.d1g.nl --delete
+      - aws s3 sync ./styles.css s3://demo2.d1g.nl --delete
 
 # grep error index.html; test $? -eq 1
 # wget  "https://validator.w3.org/check?uri=https://websitedemo-pve-1.c9users.io/index.html&output=json" -O validate.json
+# grep error validate.json; test $? -eq 1
