@@ -16,7 +16,7 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync site s3://demo2.d1g.nl --delete
+      - aws s3 sync site s3://demo2.d1g.nl --delete --acl public-read
 
 # grep error index.html; test $? -eq 1
 # wget  "https://validator.w3.org/check?uri=https://websitedemo-pve-1.c9users.io/index.html&output=json" -O validate.json
