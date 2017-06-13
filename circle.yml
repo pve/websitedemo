@@ -2,6 +2,10 @@ machine:
   python:
     version: 2.7.11
     
+dependencies:
+  pre:
+    - pip install html-linter
+    
 test:
   override:
     - grep html site/index.html
