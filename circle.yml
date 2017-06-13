@@ -8,10 +8,10 @@ dependencies:
     
 test:
   override:
-    - grep html site/index.html
-    - html-lint.py site/index.html
+    - html_lint.py site/index.html
     - pip freeze > pythonpackages.txt
-    - grep "html5lib==0.999999999" pythonpackages.txt
+    - grep "html5lib==0.9" pythonpackages.txt
+    - grep html site/index.html
 
 general:
   artifacts:
