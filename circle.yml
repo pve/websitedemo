@@ -7,7 +7,7 @@ test:
     - grep html site/index.html
     - python stricthtml.py
     - pip freeze > pythonpackages.txt
-    - grep "boto==2.20.1" pythonpackages.txt
+    - grep "html5lib==0.999999999" pythonpackages.txt
 
 general:
   artifacts:
