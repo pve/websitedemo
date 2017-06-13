@@ -5,7 +5,7 @@ machine:
 test:
   override:
     - grep html site/index.html
-    - python html-linter.py site/index.html
+    - python html-lint.py site/index.html
     - pip freeze > pythonpackages.txt
     - grep "html5lib==0.999999999" pythonpackages.txt
 
