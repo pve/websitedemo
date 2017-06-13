@@ -6,11 +6,13 @@ test:
   override:
     - grep html site/index.html
     - python stricthtml.py
-    - echo foo > validate.json # should go away
+    - pip freeze > pythonpackages.txt
+    - grep "boto==2.20.1" pythonpackages.txt
 
 general:
   artifacts:
     - "validate.json" # a single file, relative to the build directory
+    - pythonpackages.txt
     
 deployment:
   prod:
