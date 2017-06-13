@@ -2,15 +2,11 @@ machine:
   python:
     version: 2.7.11
     
-dependencies:
-  pre:
-    - pip install html-linter
-    
 test:
   override:
-    - html_lint.py site/index.html
     - pip freeze > pythonpackages.txt
-    - grep "html5lib==0.9" pythonpackages.txt
+    - grep "html-linter==0.4.0" pythonpackages.txt
+    - html_lint.py --disable=optional_tag site/index.html
     - grep html site/index.html
 
 general:
