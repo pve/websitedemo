@@ -4,6 +4,7 @@ Demo of website to Codeship and CircleCI
 The html is checked for correctness. 
 
 CircleCI:  deploying on demo2.d1g.nl http://demo2.d1g.nl.s3-website-us-east-1.amazonaws.com
+If you want to use your own bucket, you need to specify so in circle.yml and create an AWS IAM User with the policy mentioned in policy.txt (and give CircleCI access to it).
 
 Codeship: S3 Bucket:demo.d1g.nl http://s3.eu-central-1.amazonaws.com/demo.d1g.nl/index.html 
 
