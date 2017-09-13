@@ -12,8 +12,8 @@
                 "s3:PutObjectAcl"
             ],
             "Resource": [
-                "arn:aws:s3:::ccsk-lab",
-                "arn:aws:s3:::ccsk-lab/*"
+                "arn:aws:s3:::demo2.d1g.nl",
+                "arn:aws:s3:::demo2.d1g.nl/*"
             ]
         }
     ]
