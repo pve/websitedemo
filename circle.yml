@@ -18,6 +18,7 @@ deployment:
     branch: master
     commands:
       - aws s3 sync site s3://demo2.d1g.nl --delete --acl public-read
+# TODO exchange "demo2.d1g.nl" by the name of you S3 bucket!
 
 # wget  "https://validator.w3.org/check?uri=https://websitedemo-pve-1.c9users.io/index.html&output=json" -O validate.json
 # grep error validate.json; test $? -eq 1
