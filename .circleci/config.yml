@@ -15,13 +15,13 @@ jobs:
             python /usr/local/lib/python3.6/site-packages/html_linter.py --disable=optional_tag site/index.html # static website test
      - store_artifacts:
          path: results 
-     - run: sudo pip install awscli --upgrade --user
          
   deploy-job:
     docker:
        - image: circleci/python:3.6.4
     steps:
-      - run:
+     - run: sudo pip install awscli --upgrade --user
+     - run:
           name: Deploy to S3 if tests pass and branch is Master
           command: aws s3 sync site s3://demo2.d1g.nl --delete --acl public-read
 
