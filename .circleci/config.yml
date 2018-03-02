@@ -8,7 +8,8 @@ jobs:
      - run:
           command: |
             set -e
-            touch results/pythonpackages.txt
+            mkdir results
+            echo foo > results/pythonpackages.txt
             pip freeze > results/pythonpackages.txt
             grep "html-linter==0.4.0" results/pythonpackages.txt # to show how you could check versions
             html_lint.py --disable=optional_tag site/index.html # static website test
