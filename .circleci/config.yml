@@ -23,7 +23,7 @@ jobs:
      - run: sudo pip install awscli --upgrade --user
      - run:
           name: Deploy to S3 if tests pass and branch is Master
-          command: aws s3 sync site s3://demo2.d1g.nl --delete --acl public-read
+          command: awscli s3 sync site s3://demo2.d1g.nl --delete --acl public-read
 
 workflows:
   version: 2
