@@ -13,4 +13,4 @@ Buildstatus on CircleCI: [![CircleCI](https://circleci.com/gh/pve/websitedemo.sv
 
 Buildstatus on Codeship: [ ![Codeship Status for pve/websitedemo](https://app.codeship.com/projects/6fe0baa0-b6ab-0132-49dc-364f89ca8665/status?branch=master)](https://app.codeship.com/projects/71096)
 
-[![Known Vulnerabilities](https://snyk.io/test/github/{username}/{repo}/badge.svg)](https://snyk.io/test/github/{username}/{repo})
+[![Known Vulnerabilities](https://snyk.io/test/github/pve/websitedemo/badge.svg)](https://snyk.io/test/github/pve/websitedemo)
